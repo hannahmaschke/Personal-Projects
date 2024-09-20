@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBA96594-E410-44C5-8889-462415F4CC6C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MatchTheCountry</RootNamespace>
+    <AssemblyName>MatchTheCountry</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="capitalResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="capitalResultForm.Designer.cs">
+      <DependentUpon>capitalResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs" />
+    <Compile Include="EasyMode.cs" />
+    <Compile Include="EasyOrHardModeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EasyOrHardModeForm.Designer.cs">
+      <DependentUpon>EasyOrHardModeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapitalsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapitalsForm.Designer.cs">
+      <DependentUpon>CapitalsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EasyModeCapitalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EasyModeCapitalForm.Designer.cs">
+      <DependentUpon>EasyModeCapitalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="capitalResultForm.resx">
+      <DependentUpon>capitalResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EasyOrHardModeForm.resx">
+      <DependentUpon>EasyOrHardModeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapitalsForm.resx">
+      <DependentUpon>CapitalsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EasyModeCapitalForm.resx">
+      <DependentUpon>EasyModeCapitalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="matchtoitsflag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\afghanistan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\albania.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\algeria.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Argentina.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Armenia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Australia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Austria.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Bahamas.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Belarus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Belgium.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Bhutan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Bolivia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Botswana.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Andorra.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Angola.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Antigua and Barbuda.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Aruba.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Azerbaijan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Bahrain.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Bangladesh.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Barbados.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Belize.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Benin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Bermuda.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Bosnia and Herzegovina.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Brazil.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Brunei.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Bulgaria.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Burkina Faso.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Burundi.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Cabo Verde.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Cambodia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Cayman Islands.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Chad.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Chile.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\China.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Colombia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Comoros.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Congo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Costa Rica.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Croatia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Cuba.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Cyprus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Czechia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Denmark.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Djibouti.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Dominica.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Dominican Republic.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Ecuador.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Egypt.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\El Salvador.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Equatorial Guinea.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Eritrea.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Estonia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Eswatini.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Ethiopia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Fiji.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Finland.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\France.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\French Polynesia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Gabon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Georgia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Germany.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Ghana.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Greece.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Greenland.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Grenada.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Guam.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Guatemala.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Guinea.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Guinea-Bissau.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Guyana.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Haiti.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Honduras.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Hong Kong.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Hungary.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Iceland.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\India.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Indonesia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Iran.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Iraq.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Ireland.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Israel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Italy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Jamaica.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Japan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Jordan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Kazakhstan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Kenya.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Kuwait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Latvia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Lebanon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Libya.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Lithuania.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Luxembourg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Macedonia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Madagascar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Malaysia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Malta.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Mexico.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Monaco.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Mongolia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Montenegro.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Morocco.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Mozambique.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Myanmar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Nepal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Netherlands.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\New Zealand.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Nicaragua.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Niger.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Nigeria.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\North Korea.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Norway.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Pakistan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Palestine.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Panama.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Papua New Guinea.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Paraguay.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Peru.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Philippines.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Poland.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Portugal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Puerto Rico.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Qatar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Romania.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Russia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Rwanda.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Saint Kitts.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Saint Lucia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Samoa.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Saudi Arabia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Senegal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Serbia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Seychelles.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Sierra Leone.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Singapore.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Slovakia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Slovenia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Somalia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\South Africa.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\South Korea.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Spain.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Sri Lanka.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Sudan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Sweden.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Switzerland.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Syria.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Tajikistan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Tanzania.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Thailand.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Trinidad and Tobago.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Tunisia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Turkey.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Turkmenistan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Turks and Caicos.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\U.S. Virgin Islands.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Uganda.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\UK.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Ukraine.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\United Arab Emirates.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\United States.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Uruguay.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Uzbekistan.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Venezuela.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Vietnam.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Yemen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Zambia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags\Zimbabwe.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
